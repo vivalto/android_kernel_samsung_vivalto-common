@@ -1,12 +1,17 @@
-config MALI400
-	tristate "Mali-300/400/450 support"
-	depends on ARM
-	select DMA_SHARED_BUFFER
+config MALI_PLATFORM_SCX15
+	bool "Enable Mali support for SCX15 platform"
+	depends on MALI400
+        default y
 	---help---
-	  This enables support for the ARM Mali-300, Mali-400, and Mali-450
-	  GPUs.
-	  To compile this driver as a module, choose M here: the module will be
-	  called mali.
+	  This enables Mali support for SCX15 platform.
+
+#config MALI400
+#	tristate "Mali-300/400/450 support"
+#	depends on ARM
+#	default m
+#	---help---
+#	  This enables support for the ARM Mali-300, Mali-400, and Mali-450
+#	  GPUs.
 
 config MALI450
 	bool "Enable Mali-450 support"
